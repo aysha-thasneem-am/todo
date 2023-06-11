@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>To Do App</title>
+  <link rel="stylesheet" href="style.css" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Rock+Salt" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="c:\Users\lenovo\Desktop\aysha\beweb\extracurr\to-do.png">
+  <style>
+    body {
+      margin: 0px;
+      background-color: WhiteSmoke;
+      font-family: 'Rock Salt', cursive;
+      text-align: center;
+    }
+
+    .secondary-background {
+      background-color: Snow;
+    }
+
+    .tagline {
+      font-family: 'Quicksand', sans-serif;
+      color: LightSlateGrey;
+      line-height: 125px;
+    }
+
+    /* Header */
+
+    h1 {
+      margin: 0;
+      background-color: SkyBlue;
+      line-height: 100px;
+      color: Khaki;
+    }
+
+    h2 {
+      margin: 10px;
+    }
+
+    /* App Container */
+    /* Set the display value of elements with a class of container to flex. */
+    .container {
+      border: 2px solid Snow;
+      display: flex;
+    }
+
+    /* To Do Section */
+    /* Set the display value of elements with a class of week to inline-flex. */
+    /* Set the flex-grow value of elements with a class of week to 3. */
+    /* Set the week class elements to have a column flex-direction. */
+    /* Use the flex-wrap property to wrap elements with class row. */
+    .week {
+      display: inline-flex;
+      flex-grow: 3;
+      flex-direction: column;
+    }
+    /* Set the justify-content property of elements with a class of row to space-around. */
+    /* Set the align-items property of elements with a class of row to center. */
+    .row {
+      min-height: 200px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+
+    /* Set the display value of elements with a class of square to flex. */
+    /* Set the justify-content property of elements with a class of square to center. */
+    /* Set the align-items property of elements with a class of square to center. */
+    .square {
+      display: flex;
+      width: 125px;
+      height: 125px;
+      padding: 10px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .day.square {
+      background-color: SkyBlue;
+      border: 1px solid white;
+    }
+
+    .task.square {
+      background-color: Khaki;
+      border: 1px solid white;
+    }
+
+    .task p {
+      font-family: 'Quicksand', sans-serif;
+      font-weight: 700;
+      font-size: 12px;
+    }
+
+    /* Reminders */
+    /* Set the display value of elements with a class of reminders to inline-flex. */
+    /* Set the flex-grow value of elements with a class of reminders to 2. */
+    .reminders {
+      background-color: Khaki;
+      display: inline-flex;
+      flex-grow: 2;
+    }
+
+    .reminders h3 {
+      width: 100%;
+      margin: 10px;
+      color: black;
+      line-height: 90px;
+      font-size: 24px;
+    }
+
+    /* Footer */
+
+    footer {
+      font-size: 24px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+
+  <div id="header">
+    <h1>Task Tracker!</h1>
+    <h2 class="tagline">(your priorities at a glance)</h2>
+  </div>
+
+  <!-- App Container -->
+
+  <div class="container">
+
+    <!-- To Do Section -->
+
+    <div class="week">
+      <div class="row secondary-background">
+        <div class="day square">
+          <h3>MON</h3>
+        </div>
+        <div class="task square">
+          <input type="text" placeholder="Task 1">
+        </div>
+        <div class="task square">
+          <input type="text" placeholder="Task 2">
+        </div>
+        <div class="task square">
+          <input type="text" placeholder="Task 3">
+        </div>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="day square">
+        <h3>TUE</h3>
+      </div>
+      <div class="task square">
+        <input type="text" placeholder="Task 1">
+      </div>
+      <div class="task square">
+        <input type="text" placeholder="Task 2">
+      </div>
+      <div class="task square">
+        <input type="text" placeholder="Task 3">
+      </div>
+    </div>
+    <div class="row secondary-background">
+      <div class="day square">
+        <h3>WED</h3>
+      </div>
+      <div class="task square">
+        <input type="text" placeholder="Task 1">
+      </div>
+      <div class="task square">
+        <input type="text" placeholder="Task 2">
+      </div>
+      <div class="task square">
+        <input type="text" placeholder="Task 3">
+      </div>
+    </div>
+    <div class="row">
+      <div class="day square">
+        <h3>THU</h3>
+      </div>
+      <div class="task square">
+        <input type="text" placeholder="Task 1">
+      </div>
+      <div class="task square">
+        <input type="text" placeholder="Task 2">
+      </div>
+      <div class="task square">
+        <input type="text" placeholder="Task 3">
+      </div>
+    </div>
+    <div class="row secondary-background">
+      <div class="day square">
+        <h3>FRI</h3>
+      </div>
+      <div class="task square">
+        <input type="text" placeholder="Task 1">
+      </div>
+      <div class="task square">
+        <input type="text" placeholder="Task 2">
+      </div>
+      <div class="task square">
+        <input type="text" placeholder="Task 3">
+      </div>
+    </div>
+
+    <!-- Reminders Section -->
+    <div class="reminders">
+      <div class="day square">
+        <h3>Reminders</h3>
+        <div class="textbox-container">
+          <div class="reminder-textbox">
+            <input type="text" placeholder="Enter reminder for Monday">
+          </div>
+          <div class="reminder-textbox">
+            <input type="text" placeholder="Enter reminder for Tuesday">
+          </div>
+          <div class="reminder-textbox">
+            <input type="text" placeholder="Enter reminder for Wednesday">
+          </div>
+          <div class="reminder-textbox">
+            <input type="text" placeholder="Enter reminder for Thursday">
+          </div>
+          <div class="reminder-textbox">
+            <input type="text" placeholder="Enter reminder for Friday">
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  </div>
+
+  <footer>
+    <span class="tagline">© 2023 Your App. All rights reserved.</span>
+  </footer>
+
+  <!-- <script>
+    // Retrieve the reminders input
+    var remindersInput = document.getElementById("reminders-input");
+
+    // Add an event listener to capture the user input
+    remindersInput.addEventListener("input", function(event) {
+      var userInput = event.target.value;
+      console.log("User inputted reminders:", userInput);
+    });
+  </script> -->
+
+</body>
+</html>
